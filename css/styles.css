@@ -31,7 +31,7 @@ body{
     margin-left:40px;
     padding: 0;
     align-items: unset;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     height: 80px;
     top:5px;
 }
@@ -87,6 +87,49 @@ a:link{
     border-radius: 5px;
     background: linear-gradient(to bottom, rgb(83, 83, 83) 0%,rgb(39, 39, 39) 50%,rgb(27, 27, 27) 51%,rgb(22, 22, 22) 100%);
 }
+
+/* Slider ###############################################################################*/
+
+.slider{
+    width: 70vw;
+    margin-left: 55px;
+    border-radius: 5px;
+    border: 1px solid rgb(90, 89, 89);
+    background: #000;
+}
+
+.slider-img{
+    height: 420px;
+    padding: 10px 10px 70px 10px;
+    
+}
+
+.slider-description{
+    height: 70px;
+    overflow:hidden;
+    padding:0;
+    margin:0;
+    top:353px;
+    left:0;
+}
+
+.slider-description h4 ,.slider-description p{
+    text-align: start;
+    margin-left: 20px;
+}
+
+.slider-description h4{
+    padding-top: 4px;
+    font-size: 1.3rem;
+}
+
+.slider-arrows{
+    position:relative;
+    top:-30px;
+}
+
+
+
 
 
 .cards-styles{
