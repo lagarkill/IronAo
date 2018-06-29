@@ -204,6 +204,7 @@ div.slider-ul div{
 .cards-1 , .cards-2{
     display: inline-block;
     height: 100%;
+    overflow:hidden;
 }
 
 .cards-2{
@@ -219,7 +220,7 @@ div.slider-ul div{
     z-index: 10;
 }
 
-.cards-1 div h4{
+.cards-1 div h4 , .cards-2 div h4{
     box-shadow: 0 5px rgba(255, 0, 0, 1);
     margin-left: 15px;
     padding-top:10px;
@@ -228,6 +229,13 @@ div.slider-ul div{
     position:absolute;
     color:white;
     z-index: 30;
+}
+.cards-2 div img{
+    position:relative;
+    z-index: 10;
+}
+.cards-2 div h4{
+    width:240px;
 }
 .card-content{
     border-bottom-left-radius: 10px;
@@ -243,17 +251,45 @@ div.slider-ul div{
     padding-right: 25px;
     color: white;
     font-size: .9rem;
+    height: 255px;
 }
 .card-content p{
-    margin-bottom: 2rem;
-
+    margin-bottom: 1rem;
+    max-height: 170px;
+    overflow:hidden;
 }
 .card-content a{
-    display:block;
+    display:inline-block;
     padding-bottom: 1rem;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
+        /*Card Table####*/
+.card-table{
+    height: 259px;
+    background: #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border: solid 0.5px rgba(255, 255, 255, 0.2);
+    top:-20px;
+    position: relative;
+    padding-top: 30px;
+    padding-left:15px;
+    padding-right: 25px;
+    color: white;
+}
+.card-table li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+.card-table{
+    padding-top: 40px;
+}
+
+
+
 /* Media Querys ######################################################*/
 
 @media screen and (max-width: 1200px)and (min-width: 1001px){
