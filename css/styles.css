@@ -23,7 +23,7 @@ body{
 /* Menu #######################################################################################*/
 
 .menu-container{
-    margin-left:40px;
+    margin:auto;
     padding: 0;
     align-items: unset;
     margin-bottom: 20px;
@@ -33,9 +33,7 @@ body{
 
 .menu-list {
     position: relative;
-    left: 345px;
-    margin-top: 7px;
-    margin-left: 5px;
+    padding:0;
 }
 
 a:link{
@@ -47,18 +45,23 @@ a:link{
     width: 100%;
     bottom:5px;
 }
-
+#ironAo-menu{
+    padding:0;
+}
 .ironAo-icon{
-    width: 384px;
-    position:absolute;
-    bottom:18px;
+    top:-12px;
+    margin:0;
+    padding:0;
+    width: 35%;
+    position:relative;
+    z-index: 20;
 }
 .ironAo-icon a{
     width: 100%;
+    margin:0;
 }
 .h1 {
     position:absolute;
-    left:120px;
     color:white;
 }
 
@@ -67,11 +70,11 @@ a:link{
 }
 
 .menu-buttons{
-    margin-left: 5px;
+    max-width: 24%;
     background: linear-gradient(to bottom, rgb(86, 86, 86) 0%,rgb(47, 48, 48) 50%,rgb(5, 5, 5) 51%,rgb(0, 0, 0) 100%);
-    width: 150px;
     border-radius: 3px;
     height: 35px;
+    margin-left:5px;
 }
 
 .menu-buttons a{
@@ -86,12 +89,16 @@ a:link{
     border-radius: 5px;
     background: linear-gradient(to bottom, rgb(83, 83, 83) 0%,rgb(39, 39, 39) 50%,rgb(27, 27, 27) 51%,rgb(22, 22, 22) 100%);
 }
+.menu-buttons a:active{
+    border-radius: 5px;
+    background: linear-gradient(to bottom, rgb(196, 66, 66) 0%,rgb(184, 64, 64) 50%,rgb(255, 3, 3) 51%,rgb(240, 14, 14) 100%);
+}
 
 /* Slider ###############################################################################*/
 
 .slider{
-    width: 70vw;
-    margin-left: 55px;
+    width: 68vw;
+    margin: auto;
     border-radius: 5px;
     border: 1px solid rgb(90, 89, 89);
     background: #000;
@@ -132,19 +139,21 @@ a:link{
 }
 
 /* Another Slider ##############################################################*/
-
+.another-slider{
+    width: 68vw;
+    margin:auto;
+}
 .imagenes-slider{
     height: 175px;
     padding: 14px 0px;
 }
 .slider-div{
     margin-top: 50px;
-    margin-left: 50px;
 }
 .slider-ul{
     margin-left: 40px;
     height: 175px;
-    width: 65vw;
+    width: 91%;
     overflow: hidden;
     background:#000;
     border: 1px solid grey;
@@ -195,66 +204,17 @@ div.slider-ul div{
 
 /* Media Querys ######################################################*/
 
-@media screen and (max-width: 1240px) and (min-width:1151px){
-   .ironAo-icon{
-       width: 320px;
-       position:absolute;
-       bottom: 29px;
-   } 
-
-   .h1{
-       position:absolute;
-       left:90px; 
-       top:0;
-   }
-
-   .menu-buttons{
-       width: 130px;
-   }
-
-   .menu-container{
-       margin-bottom: 20px;
-   }
-   .menu-list{
-       left: 290px;
-       margin-top:0;
-   }
+@media screen and (max-width: 1200px)and (min-width: 1001px){
+  .menu-buttons{
+      max-width: 23%;
+  }  
+  .slider-ul{
+      width:90%;
+  }
 }
 
-@media screen and (max-width: 1150px){
-    .ironAo-icon{
-        width: 300px;
-        position:absolute;
-        bottom: 31px;
-    } 
-
-    .h1{
-        position:absolute;
-        font-size: 2.2rem;
-        left:90px; 
-        top:0;
-    }
-
-    .menu-list{
-        left: 275px;
-        margin-top:0;
-    }
-
-    .menu-container{
-        margin-bottom: 20px;
-    }
-
-    .menu-buttons{
-        width: 115px;
-    }
-}
-
-@media screen and (max-width: 1300px) and (min-width:1241px){
-    .menu-buttons{
-        width: 125px;
-    }
-
-    .menu-container{
-        margin-bottom: 30px;
+@media screen and (max-width: 1000px){
+    .slider-ul{
+        width:87%;
     }
 }
