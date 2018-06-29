@@ -193,15 +193,67 @@ div.slider-ul div{
     height: 160px;
 }
 
+/*Cards###############################################################*/
 
-
-
-.cards-styles{
-    display: block;
-    margin:0;
+.cards-div{
+    width: 68vw;
+    margin:auto;
+    height: 300px;
+    margin-top: 50px;
+}
+.cards-1 , .cards-2{
+    display: inline-block;
+    height: 100%;
 }
 
+.cards-2{
+    width: 34%;
+}
 
+.cards-1{
+    width: 64%;
+}
+
+.cards-1 img{
+    position: relative;
+    z-index: 10;
+}
+
+.cards-1 div h4{
+    box-shadow: 0 5px rgba(255, 0, 0, 1);
+    margin-left: 15px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width: 290px;
+    position:absolute;
+    color:white;
+    z-index: 30;
+}
+.card-content{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border: solid 0.5px rgba(255, 255, 255, 0.2);
+    position:relative;
+    top:-14px;
+    background: #000;
+    padding-top: 30px;
+    padding-left:15px;
+    padding-right: 25px;
+    color: white;
+    font-size: .9rem;
+}
+.card-content p{
+    margin-bottom: 2rem;
+
+}
+.card-content a{
+    display:block;
+    padding-bottom: 1rem;
+    color: white;
+    font-size: 1.3rem;
+}
 /* Media Querys ######################################################*/
 
 @media screen and (max-width: 1200px)and (min-width: 1001px){
