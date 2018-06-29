@@ -15,15 +15,10 @@
 
 body{
     background: #000;
-    top:0;
-    position: absolute;
-    width: 100%;
-    background-position: center top;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100vw 100vh;
     background-image: url("../img/fondo.png");
-    height: 100%;
-
+    background-attachment: fixed;
 }
 /* Menu #######################################################################################*/
 
@@ -48,18 +43,21 @@ a:link{
 
 .sword {
     position: relative;
-    width: 28vw;
-    bottom:18px;
+    width: 100%;
+    bottom:5px;
 }
 
 .ironAo-icon{
+    width: 384px;
     position:absolute;
+    bottom:18px;
 }
-
+.ironAo-icon a{
+    width: 100%;
+}
 .h1 {
     position:absolute;
     left:120px;
-    top:-10px;
     color:white;
 }
 
@@ -128,6 +126,62 @@ a:link{
     top:-30px;
 }
 
+.divider{
+    width: 40vw;
+}
+
+/* Another Slider ##############################################################*/
+
+.imagenes-slider{
+    height: 175px;
+    padding: 14px 0px;
+}
+.slider-div{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.slider-ul{
+    margin-left: 40px;
+    height: 175px;
+    width: 65vw;
+    overflow: hidden;
+    background:#000;
+    border: 1px solid grey;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.slider-ul a{
+    height: 175px;
+    width:230px;
+}
+
+.slider-div::after{
+    content:"";
+    display:inline-block;
+    background-image: url("../img/lateral2.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index:5;
+    width: 40px;
+    height: 175px; 
+}
+
+.slider-div::before{
+    content: "";
+    display:inline-block;
+    background-image: url("../img/lateral1.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index:5;
+    width: 40px;
+    height: 175px; 
+}
+
+div.slider-ul div{
+    width: 230px;
+    height: 160px;
+}
 
 
 
@@ -135,4 +189,71 @@ a:link{
 .cards-styles{
     display: block;
     margin:0;
+}
+
+
+/* Media Querys ######################################################*/
+
+@media screen and (max-width: 1240px) and (min-width:1151px){
+   .ironAo-icon{
+       width: 320px;
+       position:absolute;
+       bottom: 29px;
+   } 
+
+   .h1{
+       position:absolute;
+       left:90px; 
+       top:0;
+   }
+
+   .menu-buttons{
+       width: 130px;
+   }
+
+   .menu-container{
+       margin-bottom: 20px;
+   }
+   .menu-list{
+       left: 290px;
+       margin-top:0;
+   }
+}
+
+@media screen and (max-width: 1150px){
+    .ironAo-icon{
+        width: 300px;
+        position:absolute;
+        bottom: 31px;
+    } 
+
+    .h1{
+        position:absolute;
+        font-size: 2.2rem;
+        left:90px; 
+        top:0;
+    }
+
+    .menu-list{
+        left: 275px;
+        margin-top:0;
+    }
+
+    .menu-container{
+        margin-bottom: 20px;
+    }
+
+    .menu-buttons{
+        width: 115px;
+    }
+}
+
+@media screen and (max-width: 1300px) and (min-width:1241px){
+    .menu-buttons{
+        width: 125px;
+    }
+
+    .menu-container{
+        margin-bottom: 30px;
+    }
 }
