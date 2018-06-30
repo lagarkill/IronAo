@@ -19,6 +19,7 @@ body{
     background-size: 100vw;
     background-image: url("../img/fondo.png");
     background-attachment: fixed;
+    padding-bottom: 50px;
 }
 /* Menu #######################################################################################*/
 
@@ -164,6 +165,7 @@ a:link{
 .slider-ul a{
     height: 175px;
     width:230px;
+    display:block;
 }
 
 .slider-div::after{
@@ -190,7 +192,7 @@ a:link{
 
 div.slider-ul div{
     width: 230px;
-    height: 160px;
+    height: 175px;
 }
 
 /*Cards###############################################################*/
@@ -200,6 +202,7 @@ div.slider-ul div{
     margin:auto;
     height: 300px;
     margin-top: 50px;
+    margin-bottom: 40px;
 }
 .cards-1 , .cards-2{
     display: inline-block;
@@ -288,8 +291,78 @@ div.slider-ul div{
     padding-top: 40px;
 }
 
+/* Video ##############################################################*/  
 
+.video-trailer{
+    margin:auto;
+    width: 68vw;
+    max-height: 470px;
+}
 
+.video1 h4{
+    box-shadow: 0 5px rgba(255, 0, 0, 1);
+    margin-left: 15px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width: 290px;
+    position:absolute;
+    color:white;
+    z-index: 30;
+}
+.video1 img {
+    position:relative;
+    z-index: 10;
+}
+.video2{
+    position: relative;
+    background: #000;
+    top:-17px;
+    border:solid 0.5px rgba(255, 255, 255, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.video-trailer div video{
+    border: 1px solid rgba(255 , 255, 255, 0.5);
+    width: 87%;
+    margin-left: 6%;
+    margin-top: 6%;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 40;
+    background: #000;
+}
+
+/* Footer #############################################################*/
+.footer{
+    border: 1px solid rgba(255 , 255, 255, 0.2);
+    border-radius: 5px;
+    margin:auto;
+    width: 68vw;
+    height: 60px;
+    background:#000;
+    margin-top: 20px;
+    color:white;
+}
+.footer-text a{
+    display: inline-block;
+}
+.footer-text h4{
+    display: inline-block;
+    font-size: 1.3rem;
+    margin-left: 10px;
+    margin-bottom:0;
+}
+.footer-text{
+    display: inline-block;
+}
+.h4-2{
+    font-size: 1rem!important;
+}
+.h4-1{
+    font-weight: bold;
+}
 /* Media Querys ######################################################*/
 
 @media screen and (max-width: 1200px)and (min-width: 1001px){
