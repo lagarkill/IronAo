@@ -6,6 +6,10 @@
     -webkit-box-sizing: border-box;
 }
 
+@font-face {
+	font-family: play;
+	src:url(../fonts/Play-Regular.ttf);
+}
 /* Divisor #############################################################################*/
 .line{
     width: 100%;
@@ -14,6 +18,7 @@
 }
 
 body{
+    font-family: play;
     background: #000;
     background-repeat: no-repeat;
     background-size: 100vw;
@@ -140,18 +145,41 @@ a:link{
 }
 
 /* Another Slider ##############################################################*/
+.move{
+    -moz-animation:move-image 5s;
+    -webkit-animation: move-image 5s ;
+    animation:move-image 10s infinite linear;
+}
+@-webkit-keyframes move-image{
+    0%{
+        left:0;
+    }
+    20%{
+        left:-675px;
+    }
+    50%{
+        left:-1350px;
+    }
+    70%{
+        left:-675px;
+    }
+    100%{
+        left:0;
+    }
+}
 .another-slider{
     width: 68vw;
     margin:auto;
 }
 .imagenes-slider{
     height: 175px;
-    padding: 14px 0px;
+    padding: 14px 5px;
 }
 .slider-div{
     margin-top: 50px;
 }
 .slider-ul{
+    position: relative;
     margin-left: 40px;
     height: 175px;
     width: 91%;
@@ -161,7 +189,24 @@ a:link{
     display: inline-block;
     border-radius: 4px;
 }
-
+.slider-move:nth-child(1){
+    left:0;
+}
+.slider-move:nth-child(2){
+    left:225px;
+}
+.slider-move:nth-child(3){
+    left:450px;
+}
+.slider-move:nth-child(4){
+    left:675px;
+}
+.slider-move:nth-child(5){
+    left:900px;
+}
+.slider-move:nth-child(6){
+    left:1125px;
+}
 .slider-ul a{
     height: 175px;
     width:230px;
@@ -193,10 +238,19 @@ a:link{
 div.slider-ul div{
     width: 230px;
     height: 175px;
+    position: absolute;
 }
 
 /*Cards###############################################################*/
-
+.cards-3{
+    width: 100%!important;
+}
+.cards-div2{
+    width: 68vw;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
 .cards-div{
     width: 68vw;
     margin:auto;
@@ -240,6 +294,32 @@ div.slider-ul div{
 .cards-2 div h4{
     width:240px;
 }
+.news div{
+    position:relative;
+    top:-14px;
+    background: #000;
+    padding-top: 30px;
+    padding-left:15px;
+    padding-right: 25px;
+    color: white;
+    font-size: .9rem;
+    height: 255px;
+}
+.news{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border: solid 0.5px rgba(255, 255, 255, 0.2);
+    position:relative;
+    top:-14px;
+    background: #000;
+    padding-top: 30px;
+    padding-left:15px;
+    padding-right: 25px;
+    color: white;
+    font-size: .9rem;
+}
 .card-content{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -256,12 +336,12 @@ div.slider-ul div{
     font-size: .9rem;
     height: 255px;
 }
-.card-content p{
+.card-content p, .news p{
     margin-bottom: 1rem;
     max-height: 170px;
     overflow:hidden;
 }
-.card-content a{
+.card-content a, .news a{
     display:inline-block;
     padding-bottom: 1rem;
     color: white;
