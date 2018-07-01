@@ -315,9 +315,12 @@ div.slider-ul div{
     padding-top: 50px;
     padding-left:15px;
     padding-right: 25px;
-    padding-bottom: 60px;
+    padding-bottom:60px;
     color: white;
     font-size: .9rem;
+}
+.new-notice{
+    max-height: 400px;
 }
 .news-divisor{
     position:relative;
