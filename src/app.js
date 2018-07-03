@@ -1,4 +1,79 @@
 //#########Declara variable for slider container and the buttons for move the images
+const json = [
+    {   
+        "id" : 1,
+        "titulo":"Servidor",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    },
+    {
+        "id" : 2,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    },
+    {
+        "id" : 3,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    },
+
+    {
+        "id" : 4,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+    },
+    {
+        "id" : 5,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    },
+    {
+        "id" : 6,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    },
+    {
+        "id" : 7,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    },
+    {
+        "id" : 8,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    },
+    {
+        "id" : 9,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    }
+    ,
+    {
+        "id" : 10,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    },
+    {
+        "id" : 11,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    },
+    {
+        "id" : 12,
+        "titulo":"Servidor IronAo",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
+    }
+];
 
 let slider = $('#slider');
 
@@ -35,47 +110,50 @@ $(document).ready(function(){
 
 // Configartions for slider modal
 
-// Declare varaible
-
-let modal1 , modal2 , modal3 , modal4;
-    modal1= document.getElementById('slider1');
-    modal2= document.getElementById('slider2');
-    modal3= document.getElementById('slider3');
-    modal4= document.getElementById('slider4');
-
-const xhr = new XMLHttpRequest();
-
-const Request = (method,url) => {
-      let promise = new Promise((resolve,reject) => {
-        xhr.open(method,url,true);
-        xhr.send();
-        xhr.onload = () => {
-            if(xhr.readyState == 4 && xhr.status == 200){
-              resolve(JSON.parse(xhr.responseText));
-            }else{
-              reject("Error");
-            }
-        }
-    })
-    return promise;
-}
-    
-debugger
-const Data = (method,url) => {
-    Request(method,url)
-      .then((res) => {
-        if(res){
-          view(res)
-          
-        }
-      })
-      .catch((error) =>{
-        alert("Error al buscar la informacion");
-      })
+const configModal1 = ()=>{
+    let title = document.getElementById('modal-body1').children[0];
+    let paragraph = document.getElementById('modal-body1').children[2]
+    title.innerHTML = `
+        ${json[0].titulo}
+    `
+    paragraph.innerHTML = `
+        ${json[0].contenido}
+    `
 }
 
-Data("GET","data.json");
-
-const view = (modal)=>{
-    modal2 = 
+const configModal2 = ()=>{
+    let title = document.getElementById('modal-body2').children[0];
+    let paragraph = document.getElementById('modal-body2').children[2]
+    title.innerHTML = `
+        ${json[1].titulo}
+    `
+    paragraph.innerHTML = `
+        ${json[1].contenido}
+    `
 }
+const configModal3 = ()=>{
+    let title = document.getElementById('modal-body3').children[0];
+    let paragraph = document.getElementById('modal-body3').children[2]
+    title.innerHTML = `
+        ${json[2].titulo}
+    `
+    paragraph.innerHTML = `
+        ${json[2].contenido}
+    `
+}
+const configModal4 = ()=>{
+    let title = document.getElementById('modal-body4').children[0];
+    let paragraph = document.getElementById('modal-body4').children[2]
+    title.innerHTML = `
+        ${json[3].titulo}
+    `
+    paragraph.innerHTML = `
+        ${json[3].contenido}
+    `
+}
+configModal1();
+configModal2();
+configModal3();
+configModal4();
+
+

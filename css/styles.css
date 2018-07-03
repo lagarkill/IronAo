@@ -204,8 +204,9 @@ a:link{
     transform: scaleX(-1)
 }
 ul.content-slider li{
-    width: 20%!important; 
+    width: 20%; 
     height: 175px;
+    cursor: pointer;
 }
 .slider-container{
     width: 60vw;

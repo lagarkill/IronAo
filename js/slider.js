@@ -2,7 +2,7 @@
 
 let slider = $('#slider');
 
-let li = $('#slider li')
+let li = $('#slider li');
 
 let next = $('#btn-right');
 
@@ -25,12 +25,14 @@ slider.css('margin-left','-'+25+'%');
     moveR();
 })*/
 
-
-$(document).ready(function(){
-    $('#btn-right').click(function(){
-        $('#slider').animate({marginLeft: "-=50%"});
+/*$(document).ready(function(){
+    $('#slider-li').click(function(){
+        if($('#slider-li').css == ({width:"90vw"})){
+            $('#slider-li').css({width:"20%" , height:"175px"});
+        }
+        else{$('#slider-li').css({width:"90vw" , height:"90vh" , position:"absolute" , margin: "100px" , top:"-100%" , background:"#000" , "z-index":"40"})};
     })
-});
+});*/
 
 
 // Configartions for slider modal
