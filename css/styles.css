@@ -10,6 +10,10 @@
 	font-family: play;
 	src:url(../fonts/Play-Regular.ttf);
 }
+@font-face {
+	font-family: masseffect;
+	src:url(../fonts/me123.ttf);
+}
 /* Divisor #############################################################################*/
 .line{
     width: 100%;
@@ -27,7 +31,46 @@ body{
     padding-bottom: 50px;
 }
 /* Menu #######################################################################################*/
+.nav-w{
+    width: 68vw;
+    margin:auto;
 
+}
+.nav-w li a{
+    display:block;
+    padding:15px 20px;
+    color:white;
+}
+.nav-w li{
+    font-weight: bold;
+    list-style: none;
+    width: 25%;
+    text-align: center;
+}
+.nav-w li:hover{
+    background: rgb(105, 104, 104);
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+.nav-w ul{
+    display:flex;
+    position: relative;
+    left: -25px;
+    top: -5px;
+    border-radius: 10px;
+    background: rgb(19, 18, 18);
+    width: 100%;
+}
+#ironAo-menu input{
+    display:none;
+}
+.icon-menu span{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin-right: 30px;
+    display:none;
+}
 .menu-container{
     margin:auto;
     padding: 0;
@@ -108,16 +151,17 @@ a:link{
     border-radius: 5px;
     border: 1px solid rgb(90, 89, 89);
     background: #000;
+    height: 450px;
 }
 
 .slider-img{
-    height: 420px;
+    height: 415px;
     padding: 10px 10px 70px 10px;
-    
+    cursor:pointer;
 }
 
 .slider-description{
-    height: 70px;
+    height: 90px;
     overflow:hidden;
     padding:0;
     margin:0;
@@ -145,43 +189,45 @@ a:link{
 }
 
 /* Another Slider ##############################################################*/
-
-.slider-move:nth-child(1){
-    left:0;
-    -moz-animation:move-image1 10s infinite linear;
-    -webkit-animation: move-image1 10s infinite linear ;
-    animation:move-image1 10s infinite linear;
+.button-left , .button-right{
+    position:absolute;
+    top:40%;
+    width: 30px;
+    height: 50px;
+    display:none;
+    font-size: 2rem;
+    opacity: .5;
+    text-align: center;
 }
-.slider-move:nth-child(2){
-    left:225px;
-    -moz-animation:move-image2 20s infinite linear;
-    -webkit-animation: move-image2 20s infinite linear ;
-    animation:move-image2 20s infinite linear;
+.button-right{
+    right: 0;
+    transform: scaleX(-1)
 }
-.slider-move:nth-child(3){
-    left:450px;
-    -moz-animation:move-image3 10s infinite linear;
-    -webkit-animation: move-image3 10s infinite linear ;
-    animation:move-image3 10s infinite linear;
+ul.content-slider li{
+    width: 20%!important; 
+    height: 175px;
 }
-.slider-move:nth-child(4){
-    left:675px;
-    -moz-animation:move-image4 10s infinite linear;
-    -webkit-animation: move-image4 10s infinite linear ;
-    animation:move-image4 10s infinite linear;
+.slider-container{
+    width: 60vw;
+    margin: auto;
+    overflow: hidden;
 }
-.slider-move:nth-child(5){
-    left:900px;
-    -moz-animation:move-image5 10s infinite linear;
-    -webkit-animation: move-image5 10s infinite linear ;
-    animation:move-image5 10s infinite linear;
+.content-slider{
+    border: solid 1px #000;
+    display:flex;
+    width: 1700px;
+    background: #000;
 }
-.slider-move:nth-child(6){
-    left:1125px;
-    -moz-animation:move-image6 10s infinite linear;
-    -webkit-animation: move-image6 10s infinite linear ;
-    animation:move-image6 10s infinite linear;
+.slider-div{
+    width: 68vw;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
+.slider-div img{
+    width: 95%;
+    height :100%;
+} 
 .another-slider{
     width: 68vw;
     margin:auto;
@@ -189,9 +235,6 @@ a:link{
 .imagenes-slider{
     height: 175px;
     padding: 14px 5px;
-}
-.slider-div{
-    margin-top: 50px;
 }
 .slider-ul{
     position: relative;
@@ -211,26 +254,24 @@ a:link{
     display:block;
 }
 
-.slider-div::after{
-    content:"";
+.after img , .after{
     display:inline-block;
-    background-image: url("../img/lateral2.png");
-    background-repeat: no-repeat;
     position: absolute;
     z-index:5;
     width: 40px;
     height: 175px; 
+    top:0;
+    right: 0;
+    cursor: pointer;
 }
 
-.slider-div::before{
-    content: "";
+.before img , .before{
     display:inline-block;
-    background-image: url("../img/lateral1.png");
-    background-repeat: no-repeat;
     position: absolute;
     z-index:5;
     width: 40px;
     height: 175px; 
+    cursor: pointer;
 }
 
 div.slider-ul div{
@@ -252,9 +293,8 @@ div.slider-ul div{
 .cards-div{
     width: 68vw;
     margin:auto;
-    height: 300px;
+    height: 350px;
     margin-top: 50px;
-    margin-bottom: 40px;
 }
 .cards-1 , .cards-2{
     display: inline-block;
@@ -290,7 +330,14 @@ div.slider-ul div{
     z-index: 10;
 }
 .cards-2 div h4{
-    width:240px;
+    width:190px;
+}
+.cards-21{
+    display: none;
+    height: 280px;
+    margin-bottom:40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .news div.news-section{
     position:relative;
@@ -301,7 +348,7 @@ div.slider-ul div{
     padding-right: 25px;
     color: white;
     font-size: .9rem;
-    height: 250px;
+    max-height: 600px;
 }
 .news{
     border-bottom-left-radius: 10px;
@@ -320,7 +367,7 @@ div.slider-ul div{
     font-size: .9rem;
 }
 .new-notice{
-    max-height: 400px;
+    max-height: 600px;
 }
 .news-divisor{
     position:relative;
@@ -334,6 +381,7 @@ div.slider-ul div{
 }
 .news-divisor img{
     position:absolute;
+    width:80%;
     bottom:0;
     top:0;
     left:0;
@@ -344,16 +392,22 @@ div.slider-ul div{
     padding-bottom: 15px;
 }
 .news-section h5{
+    padding-bottom: 10px;
+    padding-top: 10px;
     font-size: 1.5rem;
 }
 .news-section  img{
     float: left;
     margin-top:10px;
-    margin-right: 15px;
+    margin-right: 25px;
     padding:5px;
     border: 1px solid white;
     height: 200px;
     width: 200px;
+}
+.paragraph-container{
+    height: 90%;
+    overflow: hidden;
 }
 .card-content{
     border-bottom-left-radius: 10px;
@@ -369,12 +423,13 @@ div.slider-ul div{
     padding-right: 25px;
     color: white;
     font-size: .9rem;
-    height: 255px;
+    height: 295px;
 }
 .card-content p, .news p{
     margin-bottom: 1rem;
-    max-height: 170px;
+    max-height: 400px;
     overflow:hidden;
+    display:inline;
 }
 .card-content a, .news a{
     display:inline-block;
@@ -394,9 +449,10 @@ div.slider-ul div{
     top:-20px;
     position: relative;
     padding-top: 30px;
-    padding-left:15px;
-    padding-right: 25px;
+    margin-left:0;
+    margin-right: 25px;
     color: white;
+    width: 100%;
 }
 .card-table li{
     list-style: none;
@@ -463,6 +519,10 @@ div.slider-ul div{
 .footer-text a{
     display: inline-block;
 }
+.fotter-img{
+    height: 30px;
+    width: 30px;
+}
 .footer-text h4{
     display: inline-block;
     font-size: 1.3rem;
@@ -478,6 +538,54 @@ div.slider-ul div{
 .h4-1{
     font-weight: bold;
 }
+
+/* MODAL ################################################################*/
+.modal1{
+    position: absolute;
+    width: 90vw!important;
+    max-width: 90vw!important;
+    left:3%;
+}
+.modal-header{
+    border-bottom:0;
+}
+.modal1 .modal-content{
+    width: 90vw;
+    background: rgb(29, 27, 27);
+}
+.modal1 .modal-body{
+    display:grid;
+    justify-content: center;
+}
+.modal-body img{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+}
+.modal-btn{
+    display:none;
+}
+.modal-body p{
+    align-content: end;
+    width: 80%;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.modal-header span{
+    color:white;
+    height: 30px;
+    width: 30px;
+}
+.modal-body h5{
+    justify-self: start;
+    margin-left: 10%;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #fff;
+}
+.modal-body p , .modal-body img {
+    justify-self: center;
+}
 /* Media Querys ######################################################*/
 
 @media screen and (max-width: 1200px)and (min-width: 1001px){
@@ -487,10 +595,318 @@ div.slider-ul div{
   .slider-ul{
       width:90%;
   }
+  .footer-text h4{
+      font-size: 1rem;
+  }
+  .h4-2{
+      font-size:.8rem!important;
+  }
+  .card-table{
+    height: 300px;
 }
+}
+@media screen and (max-width: 630px){
+    .nav-w{
+        width: 90vw;
+    }
+    .card-content{
+        height: 305px!important;
+    }
+    .cards-div{
+        height: 400px!important;
+    }
+    .cards-21{
+        height: 300px!important;
+    }
+    .card-table{
+        height: 235px!important;
 
+    }
+}
 @media screen and (max-width: 1000px){
+   
+    .slider-div{
+        width: 70vw;
+    }
+
+    #ironAo-menu label{
+        width: 70px;
+        height: 55px;
+        background: linear-gradient(to bottom, rgb(86, 86, 86) 0%,rgb(47, 48, 48) 50%,rgb(5, 5, 5) 51%,rgb(0, 0, 0) 100%);
+        position: relative;
+        top:-10px;
+        left: 40px;
+        border-radius: 3px;
+    }
+    #ironAo-menu label span{
+        font-weight: bold;
+        width: 50px;
+        height: 50px;
+        margin:auto;
+        display: block;
+        border-radius: 3px;
+    }
+
+    body{
+        background-size: 100vw 100vh;
+    }
+    .another-slider{
+        position: relative;
+        left: -10px;
+    }
     .slider-ul{
         width:87%;
+    }
+    .footer-text h4{
+        font-size: .8rem;
+    }
+    .fotter-img{
+        height: 20px;
+        width: 20px;
+    }
+    .fotter-img2{
+        height: 15px;
+        width: 15px;
+    }
+    .h4-2{
+        font-size:.5rem!important;
+        padding-right: 10px;
+    }
+    .cards-div{
+        height: 370px;
+        margin-top:0;
+        margin-bottom: 0;
+    }
+    .card-content{
+        height: 290px;
+    }
+    .card-table{
+        height: 325px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .cards-1{
+        width: 100%;
+    }
+    .cards-2{
+        display:none;
+    }
+    .cards-21{
+        display:block;
+        width: 68vw;
+        height:250px;
+        margin-bottom:40px;
+    }
+    .slider-description{
+        height:90px;
+    }
+    .carousel-inner{
+        height: 450px;
+    }
+    .slider-description{
+        display: block!important;
+    }
+}
+@media screen and (max-width:750px){
+    .slider-img{
+        height: 300px;
+    }
+    .slider{
+        height: 315px;
+    }
+    .slider-description{
+        height: 70px;
+        font-size: .6rem;
+        top:232px;
+    }
+    .video-trailer div video{
+        margin-top: 12%;
+    }
+    .footer-text h4{
+        font-size: .5rem;
+    }
+    .h4-2{
+        font-size: .4rem;
+    }
+}
+@media screen and (min-width: 1150px){
+    .slider-container{
+        width: 91%;
+    }
+   .news-divisor{
+       height: 210px;
+    }
+   .carousel-inner{
+        height: 450px;
+    }
+    .card-content{
+        height: 255px;
+    }
+}
+@media screen and (max-width: 999px)and (min-width: 700px){
+    .nav-w ul{
+        display:block!important;
+        position:absolute!important;
+        left:-62vw;
+        top:-10px;
+        border-radius: 0;
+        width: 100vw;
+        padding-top:50px;
+        z-index: 20;
+        height: 50vh;
+        transform: translateX(-100%);
+        transition: all 0.5s;
+    }
+    .nav-w ul li{
+        height: 25%;
+        width:100vw;
+    }
+    #ironAo-menu label {
+        z-index: 40;
+    }
+    #btn-menu:checked ~ .menu{
+        transform: translateX(0%);
+    }
+    #btn-menu:checked ~ .icon-menu{
+        background: red;
+    }
+    #btn-menu:checked ~ .span-icon{
+        display:none!important;
+    }
+}
+@media screen and (max-width: 700px){
+    .after img , .before img {
+        display:none;
+    }
+    .slider-container{
+        width: 100%;
+    }
+    .button-left , .button-right{
+        height: 100px;
+        width: 80px;
+        top:20%;
+        display: block;
+    }
+    .nav-w ul{
+        display:block!important;
+        position:absolute!important;
+        left:-62vw;
+        top:-10px;
+        border-radius: 0;
+        width: 100vw;
+        padding-top:50px;
+        z-index: 20;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: all 0.5s;
+    }
+    .nav-w ul li{
+        height: 25%;
+        width:100vw;
+        font-size: 2.5rem;
+    }
+    .nav-w ul li:hover{
+        font-size: 3rem;
+    }
+    #ironAo-menu label {
+        z-index: 40;
+    }
+    #btn-menu:checked ~ .menu{
+        transform: translateX(0%);
+        position: static;
+    }
+    #btn-menu:checked ~ .icon-menu{
+        background: red;
+    }
+
+    .news-section img{
+        width: 100%;
+        margin-bottom:15px;
+    }
+    .news-section{
+        max-height: 800px;
+    }
+    .new-notice{
+        max-height: 800px;
+    }
+    .news div.news-section{
+        max-height: 800px;
+        padding-right: 15px;
+    }
+    .news-divisor{
+        height: 100px;
+    }
+}
+@media screen and (max-width: 650px){
+    #ironAo-menu label{
+        position:relative;
+        left:-30px!important;
+    }
+}
+@media screen and (max-width: 576px){
+    /*.menu-container{
+        background: linear-gradient(to bottom, rgb(86, 86, 86) 0%,rgb(47, 48, 48) 50%,rgb(5, 5, 5) 51%,rgb(0, 0, 0) 100%);
+    }
+    .sword{
+        display:none!important;
+    }*/
+    .slider-div{
+        width: 95%;
+        left:20px;
+    }
+    .slider-container{
+        width: 100%;
+    }
+    .button-left , .button-right{
+        height: 100px;
+        width: 80px;
+        top:20%;
+        display: block;
+    }
+    .footer{
+        width: 90vw;
+    }
+    .cards-div{
+        width: 90vw;
+    }
+    .another-slider{
+        width: 90vw;
+    }
+    .slider{
+        width: 90vw;
+        height: 300px;
+    }
+    .video-trailer{
+        width: 90vw;
+    }
+    .ironAo-icon{
+        width:55%;
+    }
+    #ironAo-menu label{
+        position:relative;
+        left:35px!important;
+    }
+    #ironAo-menu{
+        width: 40%;
+    }
+    .sword{
+        height: 55px;
+    }
+    .ironAo-icon h1{
+        font-size: 1.7rem;
+    }
+    .footer-text h4{
+        font-size: .3rem;        
+    }
+    .fotter-img{
+        height: 15px;
+        width: 15px;
+    }
+    .fotter-img2{
+        height: 10px;
+        width: 10px;
+    }
+    .footer{
+        height: 50px;
     }
 }

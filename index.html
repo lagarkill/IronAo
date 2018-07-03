@@ -5,31 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Iron Ao</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/styles.css"> 
 </head>
 <body>
     <div class="line"></div>
     <div class="container">
         <!-- NavBar #########################################################-->
-        <div class="w-100">  
-            <nav class="row justify-content-center navbar navbar-expand-lg menu-container w-100">
-                <div class="col-4 ironAo-icon">
+        <div class="nav-w navbar-dark">  
+            
+            <nav class="row justify-content-between navbar navbar-expand-lg menu-container w-100">
+                
+                <div class="col-lg-4 col-md-6 col-sm-6 ironAo-icon">
                     <a href="#" class="navbar-brand justify-content-center d-flex">
                         <img class="d-inline-block align-top img-fluid sword" src="img/titulo.png">
                         <h1 class="d-inline-block h1">Iron<strong>Ao</strong></h1>
                     </a>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ironAo-menu" aria-controls="ironAo-menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="col-6 row collapse navbar-collapse d-flex align-items-start" id="ironAo-menu">
-                    <ul class="col-12 no-gutters row navbar-nav menu-list">
-                        <li class="col-3 col-lg-3 nav-item menu-buttons"><a class="nav-link" href="index.html">Inicio</a></li>     
-                        <li class="col-3 col-lg-3 nav-item menu-buttons"><a class="nav-link" href="news.html">Novedades</a></li>
-                        <li class="col-3 col-lg-3 nav-item menu-buttons"><a class="nav-link" href="http://iron-ao.foroactivo.com/f3-donaciones" target="_blank">Donaciones</a></li>
-                        <li class="col-3 nav-item col-lg-3 menu-buttons"><a class="nav-link" href="https://web.archive.org/web/20130621072803/http://www.juegosdrag.es/aomanual/?sec=clases2#ir" target="_blank">Manual</a></li>
-                    </ul>           
+                
+                <div class="col-lg-8 col-md-4 col-sm-4 row align-items-start  justify-content-center" id="ironAo-menu">   
+                        <input type="checkbox" id="btn-menu">
+                        <label for="btn-menu" class="icon-menu d-flex justify-content-end">
+                            <span class="navbar-toggler-icon span-icon"></span>
+                        </label>
+                    <ul class="d-flex menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="news.html">Noticias</a></li>
+                        <li><a href="http://iron-ao.foroactivo.com/f3-donaciones" target="_blank">Donaciones</a></li>
+                        <li><a href="https://web.archive.org/web/20130621072803/http://www.juegosdrag.es/aomanual/?sec=clases2#ir" target="_blank">Manual</a></li>
+                    </ul>        
                 </div>
             </nav>
         </div> 
@@ -40,27 +44,35 @@
         <!-- Slider ############################################################3-->
         <div id="carouselExampleControls" class="carousel slide slider" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100 slider-img" src="img/Mass-Effect-Trilogy.jpg" alt="First slide">
+                <div class="carousel-item active" >
+                    <label for="modal1"><img id="slider1" class="d-block w-100 slider-img" src="img/principal.jpg" alt="First slide"></label>
                     <div class="carousel-caption d-none d-md-block slider-description">
                         <h4>Titulo</h4>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100 slider-img" src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt="Second slide">
+                        <label for="modal2"><img id="slider2" class="d-block w-100 slider-img" src="img/castis1.jpg" alt="Second slide"></label>
                     <div class="carousel-caption d-none d-md-block slider-description">
                             <h4>Titulo</h4>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
                         </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 slider-img" src="img/Slider-Andromeda.jpg" alt="Third slide">
+                <div class="carousel-item" >
+                        <label for="modal3"><img id="slider3" class="d-block w-100 slider-img" src="img/castis2.jpg" alt="Third slide"></label>
                     <div class="carousel-caption d-none d-md-block slider-description">
                             <h4>Titulo</h4>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
                         </div>
                 </div>
+                 <div class="carousel-item" >
+                        <label for="modal4"><img id="slider4" class="d-block w-100 slider-img" src="img/castis3.jpg">
+                    </label>
+                        <div class="carousel-caption d-none d-md-block slider-description">
+                                <h4>Titulo</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
+                            </div>
+                    </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon slider-arrows" aria-hidden="true"></span>
@@ -71,36 +83,126 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <!--
+            MODAL############################################
+        -->
+              <!-- Button trigger modal -->
+              <button type="button" class="modal-btn btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="modal1">
+                </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal1" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>IronAo Servidor</h5>
+                      <img src="img/principal.jpg" alt="IronAO">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officiis similique, debitis minima eos id necessitatibus hic unde corporis maxime dolorem voluptatum laboriosam consectetur, iste doloremque. Eos cumque eaque suscipit sapiente dolor maiores repudiandae iure quo illum quos, velit natus.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maiores omnis earum quasi, distinctio voluptate deleniti molestiae dolores nesciunt totam voluptas iste tempore animi? Hic corporis ullam tempora, esse nobis deleniti impedit rerum itaque incidunt. Pariatur dolorem consequatur neque tempore autem nemo, eius rem, sapiente maiores, atque laborum dicta veniam?
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi animi cumque itaque deserunt consectetur illum officia eveniet, excepturi repellat, ut et odio? Aperiam, sed! Adipisci, corrupti ducimus id dicta maxime, incidunt eveniet facere, quaerat quibusdam facilis harum asperiores optio reprehenderit sapiente. Velit accusantium illo cumque pariatur explicabo quae asperiores, corrupti, quibusdam culpa quo omnis voluptates nostrum officia necessitatibus quisquam! Totam, eius repellendus blanditiis beatae voluptatum expedita dolorum nostrum ducimus cupiditate at ut vitae corrupti cumque consectetur odio earum. Ducimus rerum nostrum praesentium, quos, sequi voluptatem harum deserunt, ipsam accusamus odit necessitatibus facere ut dolores et nobis perferendis dolor similique cupiditate?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="modal-btn btn btn-primary" data-toggle="modal" data-target="#exampleModal1" id="modal2">
+            </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal1" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Castillos IronAo</h5>
+                  <img src="img/castis1.jpg" alt="IronAO">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officiis similique, debitis minima eos id necessitatibus hic unde corporis maxime dolorem voluptatum laboriosam consectetur, iste doloremque. Eos cumque eaque suscipit sapiente dolor maiores repudiandae iure quo illum quos, velit natus.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maiores omnis earum quasi, distinctio voluptate deleniti molestiae dolores nesciunt totam voluptas iste tempore animi? Hic corporis ullam tempora, esse nobis deleniti impedit rerum itaque incidunt. Pariatur dolorem consequatur neque tempore autem nemo, eius rem, sapiente maiores, atque laborum dicta veniam?
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi animi cumque itaque deserunt consectetur illum officia eveniet, excepturi repellat, ut et odio? Aperiam, sed! Adipisci, corrupti ducimus id dicta maxime, incidunt eveniet facere, quaerat quibusdam facilis harum asperiores optio reprehenderit sapiente. Velit accusantium illo cumque pariatur explicabo quae asperiores, corrupti, quibusdam culpa quo omnis voluptates nostrum officia necessitatibus quisquam! Totam, eius repellendus blanditiis beatae voluptatum expedita dolorum nostrum ducimus cupiditate at ut vitae corrupti cumque consectetur odio earum. Ducimus rerum nostrum praesentium, quos, sequi voluptatem harum deserunt, ipsam accusamus odit necessitatibus facere ut dolores et nobis perferendis dolor similique cupiditate?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="modal-btn btn btn-primary" data-toggle="modal" data-target="#exampleModal2" id="modal3">
+        </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal1" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h5>Dungeons IronAo</h5>
+              <img src="img/castis2.jpg" alt="IronAO">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officiis similique, debitis minima eos id necessitatibus hic unde corporis maxime dolorem voluptatum laboriosam consectetur, iste doloremque. Eos cumque eaque suscipit sapiente dolor maiores repudiandae iure quo illum quos, velit natus.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maiores omnis earum quasi, distinctio voluptate deleniti molestiae dolores nesciunt totam voluptas iste tempore animi? Hic corporis ullam tempora, esse nobis deleniti impedit rerum itaque incidunt. Pariatur dolorem consequatur neque tempore autem nemo, eius rem, sapiente maiores, atque laborum dicta veniam?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi animi cumque itaque deserunt consectetur illum officia eveniet, excepturi repellat, ut et odio? Aperiam, sed! Adipisci, corrupti ducimus id dicta maxime, incidunt eveniet facere, quaerat quibusdam facilis harum asperiores optio reprehenderit sapiente. Velit accusantium illo cumque pariatur explicabo quae asperiores, corrupti, quibusdam culpa quo omnis voluptates nostrum officia necessitatibus quisquam! Totam, eius repellendus blanditiis beatae voluptatum expedita dolorum nostrum ducimus cupiditate at ut vitae corrupti cumque consectetur odio earum. Ducimus rerum nostrum praesentium, quos, sequi voluptatem harum deserunt, ipsam accusamus odit necessitatibus facere ut dolores et nobis perferendis dolor similique cupiditate?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="modal-btn btn btn-primary" data-toggle="modal" data-target="#exampleModal3" id="modal4">
+    </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal1" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h5>Clases IronAo</h5>
+          <img src="img/castis3.jpg" alt="IronAO">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officiis similique, debitis minima eos id necessitatibus hic unde corporis maxime dolorem voluptatum laboriosam consectetur, iste doloremque. Eos cumque eaque suscipit sapiente dolor maiores repudiandae iure quo illum quos, velit natus.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maiores omnis earum quasi, distinctio voluptate deleniti molestiae dolores nesciunt totam voluptas iste tempore animi? Hic corporis ullam tempora, esse nobis deleniti impedit rerum itaque incidunt. Pariatur dolorem consequatur neque tempore autem nemo, eius rem, sapiente maiores, atque laborum dicta veniam?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi animi cumque itaque deserunt consectetur illum officia eveniet, excepturi repellat, ut et odio? Aperiam, sed! Adipisci, corrupti ducimus id dicta maxime, incidunt eveniet facere, quaerat quibusdam facilis harum asperiores optio reprehenderit sapiente. Velit accusantium illo cumque pariatur explicabo quae asperiores, corrupti, quibusdam culpa quo omnis voluptates nostrum officia necessitatibus quisquam! Totam, eius repellendus blanditiis beatae voluptatum expedita dolorum nostrum ducimus cupiditate at ut vitae corrupti cumque consectetur odio earum. Ducimus rerum nostrum praesentium, quos, sequi voluptatem harum deserunt, ipsam accusamus odit necessitatibus facere ut dolores et nobis perferendis dolor similique cupiditate?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
         <!-- Another Slider ############################################-->
-        <div class="another-slider">
-            <div class="slider-div">
-                <div class="slider-ul">
-                    <div class="slider-move d-inline-block">
-                        <a href="#">
-                        <img class="imagenes-slider"  width="225px" src="img/Mass-Effect-Trilogy.jpg" alt=""></a>
-                    </div>
-                    <div class="slider-move d-inline-block">
-                        <a href="#">
-                        <img class="imagenes-slider" width="225px"  src="img/Mass-Effect-Trilogy.jpg" alt=""></a>
-                    </div>
-                    <div class="slider-move d-inline-block">
-                        <a href="#">
-                        <img class="imagenes-slider" width="225px" src="img/Mass-Effect-Trilogy.jpg" alt=""></a>
-                    </div>
-                    <div class="slider-move d-inline-block">
-                        <a href="#">
-                        <img class="imagenes-slider" width="225px"  src="img/Mass-Effect-Trilogy.jpg" alt=""></a>
-                    </div>
-                    <div class="slider-move d-inline-block">
-                        <a href="#">
-                        <img class="imagenes-slider" width="225px"  src="img/Mass-Effect-Trilogy.jpg" alt=""></a>
-                    </div>
-                    <div class="slider-move d-inline-block">
-                            <a href="#">
-                            <img class="imagenes-slider" width="225px"  src="img/Mass-Effect-Trilogy.jpg" alt=""></a>
-                        </div>           
+        <div class="another-slider demo">
+            <div class="slider-div item">
+                <div class="before" id="btn-left">
+                    <img src="img/lateral1.png" alt="">
+                </div>
+                <div class="slider-container">
+                <ul id="slider" class="content-slider">
+                    <li><a href="#"><img src="img/Slider-Andromeda.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/Mass-Effect-Trilogy.jpg" alt=""></a></li>
+                    
+                </ul><div class="button-left"><img src="img/asd.png" alt=""></div>
+                    <div class="button-right"><img src="img/asd.png" alt=""></div>
+                <div class="after" id="btn-right" >
+                    <img  src="img/lateral2.png" alt="">
                 </div>
             </div>
+        </div>
         </div>
         <!-- Cards #########################################################-->
         <div class="cards-div d-flex justify-content-between">
@@ -110,10 +212,12 @@
                     <img src="img/marco1.png" alt="marco2"> 
                 </div>
                 <div class="card-content">
-                    <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.
+                    <div class="paragraph-container">
+
+                        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.
                         ​
-                    This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors.</p>
-                    <a href="#">READ MORE</a>
+                        This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors.</p>
+                    </div>
                 </div>
             </div>
             <div class="cards-2">
@@ -146,6 +250,35 @@
                 </div>
             </div>
         </div>
+        <div class="cards-2 cards-div cards-21">
+                <div>
+                    <h4>Mejores Clanes</h4>
+                    <img src="img/marco3.png" alt="marco3">
+                </div>
+                <div class="row card-table">
+                    <div class="col-8">
+                        <ul>
+                            <li><a href="#"></a>Pt Amo</li>
+                            <li><a href="#"></a>Desterrados</li>
+                            <li><a href="#"></a>Undead</li>
+                            <li><a href="#"></a>Newbie Rlz</li>
+                            <li><a href="#"></a>Free Style</li>
+                            <li><a href="#"></a>Akatsuki</li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <ul>
+                            <li>123</li>
+                            <li>1231</li>
+                            <li>123</li>
+                            <li>232</li>
+                            <li>444</li>
+                            <li>5511</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
         <!-- Video Trailer ################################################-->
 
         <div class="video-trailer">
@@ -161,31 +294,31 @@
         <!-- Footer ########################################################-->
         <div class="footer row">
             <div class="footer-text d-flex justify-content-between col-4">
-                <a href="#" class="align-self-center">
-                    <img src="img/face.png" alt="Facebook">
+                <a href="https://www.facebook.com/Iron-Ao-Argentum-Online-358286817994777/" class="align-self-center" target="_blank">
+                    <img src="img/face.png" class="fotter-img" alt="Facebook">
                 </a>
                 <h4 class="align-self-center h4-1">Facebook</h4>
                 <h4 class="align-self-center h4-2">Become a fan</h4>
-                <a href="#" class="align-self-center">
-                    <img src="img/arrow.png" alt="">
+                <a href="https://www.facebook.com/Iron-Ao-Argentum-Online-358286817994777/" target="_blank" class="align-self-center">
+                    <img class="fotter-img2" src="img/arrow.png" alt="">
                 </a>
             </div>
             <div class="footer-text d-flex justify-content-between col-4">
-                <a href="#"class="align-self-center"><img src="img/twitter.png" alt=""></a>
+                <a href="#"class="align-self-center"><img class="fotter-img" src="img/twitter.png" alt=""></a>
                 <h4 class="align-self-center h4-1">Twitter</h4>
                 <h4 class="align-self-center h4-2">Follow us</h4>
                 <a href="#" class="align-self-center">
-                    <img src="img/arrow.png" alt="">
+                    <img class="fotter-img2" src="img/arrow.png" alt="">
                 </a>
             </div>
             <div class="footer-text d-flex justify-content-between col-4">
-                <a href="#" class="align-self-center">
-                    <img src="img/Iron Ao.png" width="30px" heigh="30px" alt="Iron Ao">
+                <a href="http://iron-ao.foroactivo.com/" target="_blank" class="align-self-center">
+                    <img src="img/Iron Ao.png" class="fotter-img" alt="Iron Ao">
                 </a>
                 <h4 class="align-self-center h4-1 ">Foros</h4>
                 <h4 class="align-self-center h4-2">Visit us</h4>
-                <a href="#" class="align-self-center">
-                    <img src="img/arrow.png" alt="">
+                <a href="http://iron-ao.foroactivo.com/" target="_blank" class="align-self-center">
+                    <img class="fotter-img2" src="img/arrow.png" alt="">
                 </a>
             </div>
         </div>
@@ -194,5 +327,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
