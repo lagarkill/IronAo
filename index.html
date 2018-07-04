@@ -7,6 +7,7 @@
     <title>Iron Ao</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"> 
     <link rel="stylesheet" href="css/styles.css"> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="line"></div>
@@ -43,31 +44,30 @@
         </div>-->
         <!-- Slider ############################################################3-->
         <div id="carouselExampleControls" class="carousel slide slider" data-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner" id="sliderSearch">
                 <div class="carousel-item active" >
-                    <label for="modal1"><img id="slider1" class="d-block w-100 slider-img" src="img/principal.jpg" alt="First slide"></label>
+                    <img id="1" class="d-block w-100 slider-img" src="img/principal.jpg" alt="First slide">
                     <div class="carousel-caption d-none d-md-block slider-description">
                         <h4>Titulo</h4>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                        <label for="modal2"><img id="slider2" class="d-block w-100 slider-img" src="img/castis1.jpg" alt="Second slide"></label>
+                        <img id="2" class="d-block w-100 slider-img" src="img/castis1.jpg" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block slider-description">
                             <h4>Titulo</h4>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
                         </div>
                 </div>
                 <div class="carousel-item" >
-                        <label for="modal3"><img id="slider3" class="d-block w-100 slider-img" src="img/castis2.jpg" alt="Third slide"></label>
+                        <img id="3" class="d-block w-100 slider-img" src="img/castis2.jpg" alt="Third slide">
                     <div class="carousel-caption d-none d-md-block slider-description">
                             <h4>Titulo</h4>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
                         </div>
                 </div>
                  <div class="carousel-item" >
-                        <label for="modal4"><img id="slider4" class="d-block w-100 slider-img" src="img/castis3.jpg">
-                    </label>
+                        <img id="4" class="d-block w-100 slider-img" src="img/castis3.jpg">
                         <div class="carousel-caption d-none d-md-block slider-description">
                                 <h4>Titulo</h4>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
@@ -86,91 +86,24 @@
         <!--
             MODAL############################################
         -->
-              <!-- Button trigger modal -->
-              <button type="button" class="modal-btn btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="modal1">
-                </button>
-              
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal1" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body" id="modal-body1">
-                        <h5></h5>
-                      <img src="img/principal.jpg" alt="IronAO">
-                      <p>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button type="button" class="modal-btn btn btn-primary" data-toggle="modal" data-target="#exampleModal1" id="modal2">
-            </button>
-          
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1Label" aria-hidden="true">
-            <div class="modal-dialog modal1" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body" id="modal-body2">
-                    <h5></h5>
-                  <img src="img/castis1.jpg" alt="IronAO">
-                  <p>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="modal-btn btn btn-primary" data-toggle="modal" data-target="#exampleModal2" id="modal3">
-        </button>
-      
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModal2Label" aria-hidden="true">
-        <div class="modal-dialog modal1" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body" id="modal-body3">
-                <h5></h5>
-              <img src="img/castis2.jpg" alt="IronAO">
-              <p>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button type="button" class="modal-btn btn btn-primary" data-toggle="modal" data-target="#exampleModal3" id="modal4">
-    </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
-    <div class="modal-dialog modal1" role="document">
-      <div class="modal-content">
+            
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+            <span class="close">&times;</span>
+            <h2></h2>
         </div>
-        <div class="modal-body" id="modal-body4">
-            <h5></h5>
-          <img src="img/castis3.jpg" alt="IronAO">
-          <p>
-          </p>
+        <div id="Cambiaso" class="modal-body"> <!-- ACA CAMBIAS LO QUE SE NECESITA DEL MODAL -->
+            <p>TEXTO ACA PARA CAMBIAR</p>
         </div>
-      </div>
+        <div class="modal-footer">
+            <h3></h3>
+        </div>
     </div>
-  </div>
+</div>
         <!-- Another Slider ############################################-->
         <div class="another-slider demo">
             <div class="slider-div item">
@@ -178,16 +111,15 @@
                     <img src="img/lateral1.png" alt="">
                 </div>
                 <div class="slider-container">
-                <ul id="slider" class="content-slider">
-                    <label for="modal5"><li id="slider-li"><img src="img/Slider-Andromeda.jpg" alt=""></li></label>
-                    <label for="modal6"><li><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></li></label>
-                    <label for="modal7"><li><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></a></li></label>
-                    <label for="modal8"><li><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></li></label>
-                    <label for="modal9"><li><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></li></label>
-                    <label for="modal10"><li><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></li></label>
-                    <label for="modal11"><li><img src="img/9189-mass-effect-wallpaper-effect3-games-imagepages-images.jpg" alt=""></li></label>
-                    <label for="modal12"><li><img src="img/Mass-Effect-Trilogy.jpg" alt=""></li></label>
-                    
+                <ul id="miniSlider" class="content-slider">
+                    <li><img id="5"src="img/ironao1.jpg" alt=""></li>
+                    <li><img id="6" src="img/ironao2.jpg" alt=""></li>
+                    <li><img id="7" src="img/ironao3.jpg" alt=""></li>
+                    <li><img id="8" src="img/ironao4.jpg" alt=""></li>
+                    <li><img id="9" src="img/ironao5.jpg" alt=""></li>
+                    <li><img id="10" src="img/ironao6.jpg" alt=""></li>
+                    <li><img id="11" src="img/ironao7.jpg" alt=""></li>
+
                 </ul><div class="button-left"><img src="img/asd.png" alt=""></div>
                     <div class="button-right"><img src="img/asd.png" alt=""></div>
                 <div class="after" id="btn-right" >
@@ -316,7 +248,7 @@
         </div>
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="src/app.js"></script>

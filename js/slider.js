@@ -1,3 +1,5 @@
+import ShowModal from './modal';
+ShowModal();
 //#########Declara variable for slider container and the buttons for move the images
 
 let slider = $('#slider');
