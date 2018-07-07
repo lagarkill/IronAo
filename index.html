@@ -1,78 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Iron Ao</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="css/styles.css"> 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
     <div class="line"></div>
-    <div class="container">
+
+    <div class="container-ironao">
+
         <!-- NavBar #########################################################-->
-        <div class="nav-w navbar-dark">  
-            
+        <div class="nav-w navbar-dark">
+
             <nav class="row justify-content-between navbar navbar-expand-lg menu-container w-100">
-                
-                <div class="col-lg-4 col-md-6 col-sm-6 ironAo-icon">
+
+                <div class="ironAo-icon">
                     <a href="#" class="navbar-brand justify-content-center d-flex">
                         <img class="d-inline-block align-top img-fluid sword" src="img/titulo.png">
-                        <h1 class="d-inline-block h1">Iron<strong>Ao</strong></h1>
+                        <h1 class="d-inline-block h1">Iron
+                            <strong>Ao</strong>
+                        </h1>
                     </a>
                 </div>
-                
-                <div class="col-lg-8 col-md-4 col-sm-4 row align-items-start  justify-content-center" id="ironAo-menu">   
-                        <input type="checkbox" id="btn-menu">
-                        <label for="btn-menu" class="icon-menu d-flex justify-content-end">
-                            <span class="navbar-toggler-icon span-icon"></span>
-                        </label>
+
+                <div class="row align-items-start  justify-content-center" id="ironAo-menu">
+                    <input type="checkbox" id="btn-menu">
+                    <label for="btn-menu" id="btn-label" class="icon-menu d-flex justify-content-end ">
+                        <div class="label-span spaneable"></div>
+                    </label>
+
                     <ul class="d-flex menu">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="news.html">Noticias</a></li>
-                        <li><a href="http://iron-ao.foroactivo.com/f3-donaciones" target="_blank">Donaciones</a></li>
-                        <li><a href="https://web.archive.org/web/20130621072803/http://www.juegosdrag.es/aomanual/?sec=clases2#ir" target="_blank">Manual</a></li>
-                    </ul>        
+                        <div class="li-container">
+                            <li class="li-active li-nav">
+                                <a href="index.html">Inicio</a>
+                            </li>
+                            <li class="li-nav">
+                                <a href="news.html">News</a>
+                            </li>
+                            <li class="li-nav">
+                                <a href="donaciones.html">Donaciones</a>
+                            </li>
+                            <li class="li-nav">
+                                <a href="https://web.archive.org/web/20130621072803/http://www.juegosdrag.es/aomanual/?sec=clases2#ir"
+                                    target="_blank">Manual</a>
+                            </li>
+                        </div>
+                    </ul>
                 </div>
             </nav>
-        </div> 
+        </div>
 
-       <!-- <div class="d-flex justify-content-center">
-                <img class="divider" src="img/accent-2.png">
-        </div>-->
         <!-- Slider ############################################################3-->
         <div id="carouselExampleControls" class="carousel slide slider" data-ride="carousel">
             <div class="carousel-inner" id="sliderSearch">
-                <div class="carousel-item active" >
+                <div class="carousel-item active">
                     <img id="1" class="d-block w-100 slider-img" src="img/principal.jpg" alt="First slide">
                     <div class="carousel-caption d-none d-md-block slider-description">
                         <h4>Titulo</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur
+                            non eius?</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                        <img id="2" class="d-block w-100 slider-img" src="img/castis1.jpg" alt="Second slide">
+                    <img id="2" class="d-block w-100 slider-img" src="img/castis1.jpg" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block slider-description">
-                            <h4>Titulo</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
-                        </div>
-                </div>
-                <div class="carousel-item" >
-                        <img id="3" class="d-block w-100 slider-img" src="img/castis2.jpg" alt="Third slide">
-                    <div class="carousel-caption d-none d-md-block slider-description">
-                            <h4>Titulo</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
-                        </div>
-                </div>
-                 <div class="carousel-item" >
-                        <img id="4" class="d-block w-100 slider-img" src="img/castis3.jpg">
-                        <div class="carousel-caption d-none d-md-block slider-description">
-                                <h4>Titulo</h4>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?</p>
-                            </div>
+                        <h4>Titulo</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur
+                            non eius?</p>
                     </div>
+                </div>
+                <div class="carousel-item">
+                    <img id="3" class="d-block w-100 slider-img" src="img/castis2.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block slider-description">
+                        <h4>Titulo</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur
+                            non eius?</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img id="4" class="d-block w-100 slider-img" src="img/castis3.jpg">
+                    <div class="carousel-caption d-none d-md-block slider-description">
+                        <h4>Titulo</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur
+                            non eius?</p>
+                    </div>
+                </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon slider-arrows" aria-hidden="true"></span>
@@ -86,61 +107,110 @@
         <!--
             MODAL############################################
         -->
-            
-<!-- The Modal -->
-<div id="myModal" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2></h2>
-        </div>
-        <div id="Cambiaso" class="modal-body"> <!-- ACA CAMBIAS LO QUE SE NECESITA DEL MODAL -->
-            <p>TEXTO ACA PARA CAMBIAR</p>
-        </div>
-        <div class="modal-footer">
-            <h3></h3>
-        </div>
-    </div>
-</div>
-        <!-- Another Slider ############################################-->
-        <div class="another-slider demo">
-            <div class="slider-div item">
-                <div class="before" id="btn-left">
-                    <img src="img/lateral1.png" alt="">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2></h2>
                 </div>
-                <div class="slider-container">
-                <ul id="miniSlider" class="content-slider">
-                    <li><img id="5"src="img/ironao1.jpg" alt=""></li>
-                    <li><img id="6" src="img/ironao2.jpg" alt=""></li>
-                    <li><img id="7" src="img/ironao3.jpg" alt=""></li>
-                    <li><img id="8" src="img/ironao4.jpg" alt=""></li>
-                    <li><img id="9" src="img/ironao5.jpg" alt=""></li>
-                    <li><img id="10" src="img/ironao6.jpg" alt=""></li>
-                    <li><img id="11" src="img/ironao7.jpg" alt=""></li>
-
-                </ul><div class="button-left"><img src="img/asd.png" alt=""></div>
-                    <div class="button-right"><img src="img/asd.png" alt=""></div>
-                <div class="after" id="btn-right" >
-                    <img  src="img/lateral2.png" alt="">
+                <div id="Cambiaso" class="modal-body">
+                    <!-- ACA CAMBIAS LO QUE SE NECESITA DEL MODAL -->
+                    <p>TEXTO ACA PARA CAMBIAR</p>
+                </div>
+                <div class="modal-footer">
+                    <h3></h3>
                 </div>
             </div>
         </div>
+        <!-- Another Slider ############################################-->
+        <div class="mixedSlider-container">
+            <div id="mixedSlider">
+                <div id="sliderMini" class="MS-content content-slider">
+                    <div class="item">
+                        <div class="imgTitle">
+                            <img id="5" src="img/ironao1.jpg" alt="" />
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="imgTitle">
+                            <img id="6" src="img/ironao2.jpg" alt="" />
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="imgTitle">
+
+                            <img id="7" src="img/ironao3.jpg" alt="" />
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="imgTitle">
+
+                            <img id="8" src="img/ironao4.jpg" alt="" />
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="imgTitle">
+
+                            <img id="9" src="img/ironao5.jpg" alt="" />
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="imgTitle">
+                            <img id="10" src="img/ironao6.jpg" alt="" />
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="imgTitle">
+                            <img id="11" src="img/ironao7.jpg" alt="" />
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="MS-controls">
+                    <button class="MS-left">
+                        <img src="img/asd.png" alt="">
+                    </button>
+                    <button class="MS-right">
+                        <img src="img/asd.png">
+                    </button>
+                </div>
+
+            </div>
         </div>
         <!-- Cards #########################################################-->
         <div class="cards-div d-flex justify-content-between">
             <div class="cards-1">
                 <div>
-                    <h4>Lastest News</h4>
-                    <img src="img/marco1.png" alt="marco2"> 
+                    <h4>Estado del servidor</h4>
+                    <img src="img/marco1.png" alt="marco2">
                 </div>
                 <div class="card-content">
                     <div class="paragraph-container">
-
-                        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.
-                        ​
-                        This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors.</p>
+                        <div class="server-container">
+                            <h5 id="server-state">ONLINE</h5>
+                            <h5 id="onlines-count">
+                                <span>Onlines :</span>
+                                <span id="count">40</span>
+                            </h5>
+                        </div>
+                        <p class="description">his is a great space to write long text about your company and your services. You can use this space
+                            to go into a little more detail about your company. Talk about your team and what services you
+                            provide. Tell your visitors the story of how you came up with the idea for your business and
+                            what makes you different from your competitorshis is a great space to write long text about your
+                            company and your services. You can use this space to go into a little more detail about your
+                            company. Talk about your team and what services you provide. Tell your visitors the story of
+                            how you came up with the idea for your business and what makes you different from your competitors</p>
                     </div>
                 </div>
             </div>
@@ -152,12 +222,18 @@
                 <div class="row card-table">
                     <div class="col-8">
                         <ul>
-                            <li><a href="#"></a>Pt Amo</li>
-                            <li><a href="#"></a>Desterrados</li>
-                            <li><a href="#"></a>Undead</li>
-                            <li><a href="#"></a>Newbie Rlz</li>
-                            <li><a href="#"></a>Free Style</li>
-                            <li><a href="#"></a>Akatsuki</li>
+                            <li>
+                                <a href="#"></a>Pt Amo</li>
+                            <li>
+                                <a href="#"></a>Desterrados</li>
+                            <li>
+                                <a href="#"></a>Undead</li>
+                            <li>
+                                <a href="#"></a>Newbie Rlz</li>
+                            <li>
+                                <a href="#"></a>Free Style</li>
+                            <li>
+                                <a href="#"></a>Akatsuki</li>
                         </ul>
                     </div>
                     <div class="col-4">
@@ -175,34 +251,40 @@
             </div>
         </div>
         <div class="cards-2 cards-div cards-21">
-                <div>
-                    <h4>Mejores Clanes</h4>
-                    <img src="img/marco3.png" alt="marco3">
+            <div>
+                <h4>Mejores Clanes</h4>
+                <img src="img/marco3.png" alt="marco3">
+            </div>
+            <div class="row card-table">
+                <div class="col-8">
+                    <ul>
+                        <li>
+                            <a href="#"></a>Pt Amo</li>
+                        <li>
+                            <a href="#"></a>Desterrados</li>
+                        <li>
+                            <a href="#"></a>Undead</li>
+                        <li>
+                            <a href="#"></a>Newbie Rlz</li>
+                        <li>
+                            <a href="#"></a>Free Style</li>
+                        <li>
+                            <a href="#"></a>Akatsuki</li>
+                    </ul>
                 </div>
-                <div class="row card-table">
-                    <div class="col-8">
-                        <ul>
-                            <li><a href="#"></a>Pt Amo</li>
-                            <li><a href="#"></a>Desterrados</li>
-                            <li><a href="#"></a>Undead</li>
-                            <li><a href="#"></a>Newbie Rlz</li>
-                            <li><a href="#"></a>Free Style</li>
-                            <li><a href="#"></a>Akatsuki</li>
-                        </ul>
-                    </div>
-                    <div class="col-4">
-                        <ul>
-                            <li>123</li>
-                            <li>1231</li>
-                            <li>123</li>
-                            <li>232</li>
-                            <li>444</li>
-                            <li>5511</li>
+                <div class="col-4">
+                    <ul>
+                        <li>123</li>
+                        <li>1231</li>
+                        <li>123</li>
+                        <li>232</li>
+                        <li>444</li>
+                        <li>5511</li>
 
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
+        </div>
         <!-- Video Trailer ################################################-->
 
         <div class="video-trailer">
@@ -217,7 +299,7 @@
         </div>
         <!-- Footer ########################################################-->
         <div class="footer row">
-            <div class="footer-text d-flex justify-content-between col-4">
+            <div class="footer-text d-flex justify-content-between col-12 col-md-4 col-lg-4">
                 <a href="https://www.facebook.com/Iron-Ao-Argentum-Online-358286817994777/" class="align-self-center" target="_blank">
                     <img src="img/face.png" class="fotter-img" alt="Facebook">
                 </a>
@@ -227,30 +309,48 @@
                     <img class="fotter-img2" src="img/arrow.png" alt="">
                 </a>
             </div>
-            <div class="footer-text d-flex justify-content-between col-4">
-                <a href="#"class="align-self-center"><img class="fotter-img" src="img/twitter.png" alt=""></a>
+            <div class="footer-text d-flex justify-content-between col-lg-4 col-md-4 col-12 ">
+                <a href="#" class="align-self-center">
+                    <img class="fotter-img" src="img/twitter.png" alt="">
+                </a>
                 <h4 class="align-self-center h4-1">Twitter</h4>
                 <h4 class="align-self-center h4-2">Follow us</h4>
                 <a href="#" class="align-self-center">
                     <img class="fotter-img2" src="img/arrow.png" alt="">
                 </a>
             </div>
-            <div class="footer-text d-flex justify-content-between col-4">
-                <a href="http://iron-ao.foroactivo.com/" target="_blank" class="align-self-center">
+            <div class="footer-text d-flex justify-content-between col-12 col-md-4 col-lg-4">
+                <a href="http://iron-ao.foroactivo.com/" target="_blank" class="align-self-center justify-content-start">
                     <img src="img/Iron Ao.png" class="fotter-img" alt="Iron Ao">
                 </a>
-                <h4 class="align-self-center h4-1 ">Foros</h4>
-                <h4 class="align-self-center h4-2">Visit us</h4>
-                <a href="http://iron-ao.foroactivo.com/" target="_blank" class="align-self-center">
+                <h4 class="align-self-center justify-content-start h4-1 ">Foros</h4>
+                <h4 class="align-self-center justify-content-start h4-2">Visit us</h4>
+                <a href="http://iron-ao.foroactivo.com/" target="_blank" class="align-self-center justify-content-start">
                     <img class="fotter-img2" src="img/arrow.png" alt="">
                 </a>
             </div>
         </div>
     </div>
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/multislider.min.js"></script>
     <script src="src/app.js"></script>
+    <script>
+        $('#basicSlider').multislider({
+            continuous: true,
+            duration: 2000
+        });
+        $('#mixedSlider').multislider({
+            duration: 750,
+            interval: 3000
+        });
+    </script>
 </body>
+
 </html>
