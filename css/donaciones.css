@@ -32,17 +32,22 @@ a{
     border: solid 2px #562424;
 }
 .title{
+    height: 90px!important;
+    border-collapse: collapse;
     color:rgb(206, 17, 17);
     font-size: 2rem;
     padding: 20px 30px;
-    border: solid 2px #562424;
 }
 .description{
-    width: 80%;
+    height: 100%;
+    border-top: solid 2px #562424;;
+    border-left: solid 2px #562424;
+    width: 100%;
 }
 .price{
+    height: 100%;
+    border: solid 2px #562424;
     text-align: center;
-    border-left: solid 2px #888888;
     width: 20%;
 }
 
@@ -95,6 +100,7 @@ a{
 
 .buy-container a:hover{
     background: #888;
+    color:rgb(82, 20, 20);
 }
 
 .buy-list{

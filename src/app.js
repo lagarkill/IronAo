@@ -28,7 +28,6 @@ const json = [
         "titulo":"Servidor IronAo",
         "img" : "img/castis1.jpg",
         "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
-
     },
     {
         "id" : 3,
@@ -96,6 +95,13 @@ const json = [
         "img" : "img/ironao7.jpg",
         "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
 
+    },
+    {
+        "id" : 12,
+        "titulo":"Servidor IronAo",
+        "img" : "img/ironao7.jpg",
+        "contenido":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?"
+
     }
 ];
 
@@ -145,6 +151,7 @@ const search = (id)=>{
 
 const onlines = ()=>{
     const online = document.getElementById('server-state');
+    
     if(online.innerText === "ONLINE"){
         online.style.color = "#21cc21";
     } else if (online.innerText === "OFFLINE"){
