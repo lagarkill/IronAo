@@ -28,6 +28,11 @@ const donaciones = [
         "id": 5,
         "descripcion" : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis eum molestias, pariatur non eius?pariatur non eius?",
         "precio": "$1415"
+    },
+    {
+        "id": 6,
+        "descripcion" : "la donacion piola",
+        "precio": "$14150"
     }
 ]
 

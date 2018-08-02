@@ -990,7 +990,7 @@ a:link{
         position: fixed!important;
         background: red;
         display:block!important;
-        left:-13px;
+        left:0;
         top:0;
         border-radius: 0;
         width: 100vw;
@@ -1043,7 +1043,7 @@ a:link{
         background: red;
         position: fixed!important;
         top: 15px;
-        right: 33px;     
+        right: 30px;     
     }
     #btn-menu:checked ~ .spaneable{
         display: none!important;
@@ -1128,6 +1128,9 @@ a:link{
         border: none;
         height: 150px;
         background: none;
+    }
+    #mixedSlider .MS-controls button{
+        opacity: 1;
     }
 }
 
